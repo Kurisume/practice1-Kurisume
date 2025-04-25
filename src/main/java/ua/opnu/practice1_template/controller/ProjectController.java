@@ -1,7 +1,7 @@
-package com.example.project.controller;
+package ua.opnu.practice1_template.controller;
 
-import com.example.project.model.Project;
-import com.example.project.service.ProjectService;
+import ua.opnu.practice1_template.model.Project;
+import ua.opnu.practice1_template.service.ProjectService;
 
 import org.springframework.web.bind.annotation.*;
 

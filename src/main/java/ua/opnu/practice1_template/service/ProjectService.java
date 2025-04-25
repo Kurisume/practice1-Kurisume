@@ -1,7 +1,7 @@
-package com.example.project.service;
+package ua.opnu.practice1_template.service;
 
-import com.example.project.model.Project;
-import com.example.project.repository.ProjectRepository;
+import ua.opnu.practice1_template.model.Project;
+import ua.opnu.practice1_template.repository.ProjectRepository;
 
 import org.springframework.stereotype.Service;
 

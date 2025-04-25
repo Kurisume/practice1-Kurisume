@@ -1,4 +1,4 @@
-package com.example.project.model;
+package ua.opnu.practice1_template.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

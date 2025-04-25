@@ -1,6 +1,6 @@
-package com.example.project.repository;
+package ua.opnu.practice1_template.repository;
 
-import com.example.project.model.Project;
+import ua.opnu.practice1_template.model.Project;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProjectRepository extends JpaRepository<Project, Long> {
