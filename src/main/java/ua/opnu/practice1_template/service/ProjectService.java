@@ -1,8 +1,7 @@
-package ua.opnu.practice1_template.service;
+package com.example.project.service;
 
-import ua.opnu.practice1_template.model.Project;
-import ua.opnu.practice1_template.repository.ProjectRepository;
-
+import com.example.project.model.Project;
+import com.example.project.repository.ProjectRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,17 +9,25 @@ import java.util.List;
 @Service
 public class ProjectService {
 
-    private final ProjectRepository repo;
+    private final ProjectRepository projectRepository;
 
-    public ProjectService(ProjectRepository repo) {
-        this.repo = repo;
+    public ProjectService(ProjectRepository projectRepository) {
+        this.projectRepository = projectRepository;
     }
 
     public Project create(Project project) {
-        return repo.save(project);
+        return projectRepository.save(project);
     }
 
     public List<Project> getAll() {
-        return repo.findAll();
+        return projectRepository.findAll();
+    }
+
+    public Project update(Project project) {
+        return projectRepository.save(project);
+    }
+
+    public void delete(Long id) {
+        projectRepository.deleteById(id);
     }
 }

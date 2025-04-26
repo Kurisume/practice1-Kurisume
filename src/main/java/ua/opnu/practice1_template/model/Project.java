@@ -1,12 +1,12 @@
-package ua.opnu.practice1_template.model;
+package com.example.project.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.time.LocalDate;
+import java.util.List;
 
-@Entity
 @Data
+@Entity
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,4 +16,15 @@ public class Project {
     private String description;
     private LocalDate startDate;
     private LocalDate endDate;
+
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
+    private List<Task> tasks;
+
+    @OneToMany(mappedBy = "project", cascade = CascadeType.ALL)
+    private List<Assignment> assignments;
+
+    // Вот этот метод нужно добавить
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

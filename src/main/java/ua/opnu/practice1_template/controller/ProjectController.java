@@ -1,8 +1,7 @@
-package ua.opnu.practice1_template.controller;
+package com.example.project.controller;
 
-import ua.opnu.practice1_template.model.Project;
-import ua.opnu.practice1_template.service.ProjectService;
-
+import com.example.project.model.Project;
+import com.example.project.service.ProjectService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,19 +9,31 @@ import java.util.List;
 @RestController
 @RequestMapping("/projects")
 public class ProjectController {
-    private final ProjectService service;
 
-    public ProjectController(ProjectService service) {
-        this.service = service;
+    private final ProjectService projectService;
+
+    public ProjectController(ProjectService projectService) {
+        this.projectService = projectService;
     }
 
     @PostMapping
     public Project create(@RequestBody Project project) {
-        return service.create(project);
+        return projectService.create(project);
     }
 
     @GetMapping
     public List<Project> getAll() {
-        return service.getAll();
+        return projectService.getAll();
+    }
+
+    @PutMapping("/{id}")
+    public Project update(@PathVariable Long id, @RequestBody Project project) {
+        project.setId(id);
+        return projectService.update(project);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        projectService.delete(id);
     }
 }
