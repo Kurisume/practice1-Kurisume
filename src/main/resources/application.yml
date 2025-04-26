@@ -1,4 +1,9 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d05s7fa4d50c73apdvbg-a.oregon-postgres.render.com:5432/projectdb_f9wz
+    username: projectdb_f9wz_user
+    password: nVCshY69EfC7Uo7TyMqdbmA8DBHKPJJk
+    driver-class-name: org.postgresql.Driver
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -7,14 +12,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-  datasource:
-    url: jdbc:postgresql://dpg-d05s7fa4d50c73apdvbg-a/projectdb_f9wz?sslmode=require
-    username: projectdb_f9wz_user
-    password: nVCshY69EfC7Uo7TyMqdbmA8DBHKPJJk
-    driver-class-name: org.postgresql.Driver
-  sql:
-    init:
-      platform: postgres
 
 server:
   port: 8080
