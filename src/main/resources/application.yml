@@ -1,15 +1,13 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d06gna49c44c73fhl5g0-a.oregon-postgres.render.com/projectdb_new
+    username: kurisume
+    password: psnhd4wsq2Tr29PXmbxyUc4FM6XVSeoX
+    driver-class-name: org.postgresql.Driver
   jpa:
-    show-sql: true
     hibernate:
       ddl-auto: update
-  datasource:
-    url: jdbc:postgresql://dpg-d05s7fa4d50c73apdvbg-a.oregon-postgres.render.com:5432/projectdb_f9wz?sslmode=require
-    username: projectdb_f9wz_user
-    password: nVCshY69EfC7Uo7TyMqdbmA8DBHKPJJk
-    driver-class-name: org.postgresql.Driver
-
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 server:
   port: 8080
-  servlet:
-    context-path: /
