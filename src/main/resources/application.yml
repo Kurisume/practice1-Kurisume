@@ -9,7 +9,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: jdbc:postgresql://dpg-d05s7fa4d50c73apdvbg-a/projectdb_f9wz?sslmode=require
-
     username: projectdb_f9wz_user
     password: nVCshY69EfC7Uo7TyMqdbmA8DBHKPJJk
     driver-class-name: org.postgresql.Driver
@@ -19,3 +18,5 @@ spring:
 
 server:
   port: 8080
+  servlet:
+    context-path: /
